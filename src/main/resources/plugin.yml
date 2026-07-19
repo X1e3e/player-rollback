@@ -1,0 +1,18 @@
+name: PlayerRollback
+version: '${version}'
+
+main: skylands.online.playerrollback.PlayerRollbackPlugin
+api-version: '26.2'
+load: POSTWORLD
+
+commands:
+  rollback:
+    description: Rollback player profile to a snapshot.
+    aliases: [rb]
+    permission: rollback.admin
+    usage: /rollback <list/restore> <player> [id]
+
+permissions:
+  rollback.admin:
+    description: Allows accessing rollback lists and restoring profiles.
+    default: op
